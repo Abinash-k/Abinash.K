@@ -31,6 +31,28 @@
   <link rel="stylesheet" href="./assets/css/require.css">
   <link rel="stylesheet" href="./assets/css/pages/service.css">
 
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      ;(function () {
+        const e = 'lipy-chat'
+        if (document.getElementById(e)) return
+        const t = document.createElement('script')
+        t.id = e
+        t.src = 'https://cdn.lipy.ai/packages/webchat.js'
+        t.onload = function () {
+          window.LipyWebchat({
+            apiKey: 'aQ4jKgxj9lZwt70kk6sA2flSCmdJpe', 
+            orgId: 'Zo5xB7HMGjZNHdmy',
+          })
+        }
+        t.onerror = function () {
+          console.error('Failed to load the Lipy webchat script.')
+        }
+        document.body.appendChild(t)
+      })()
+    })
+  </script>
+
 </head>
 
 <body>
